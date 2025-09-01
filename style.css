@@ -10,26 +10,32 @@ body {
   font-family: sans-serif;
 }
 
+h1 {
+  margin-top: 1rem;
+  font-size: 3rem;
+  color: #fff;
+}
+
 .container {
-  height: 70vh;
   display: flex;
   justify-content: center;
   align-items: center;
+  margin: 1rem 0;
 }
 
 .game {
-  height: 60vmin;
-  width: 60vmin;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   gap: 1.5vmin;
+  width: 60vmin;
+  height: 60vmin;
 }
 
 .box {
-  height: 18vmin;
   width: 18vmin;
+  height: 18vmin;
   border-radius: 1rem;
   border: none;
   box-shadow: 0 0 1rem rgba(0, 0, 0, 0.3);
@@ -62,35 +68,40 @@ body {
   transform: scale(0.95);
 }
 
+.msg-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  z-index: 10;
+}
+
 #msg {
   color: #ffffc7;
   font-size: 6vmin;
   text-align: center;
 }
 
-.msg-container {
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  gap: 3rem;
-}
-
 .hide {
   display: none;
 }
 
-/* Responsive adjustments */
+/* Responsive */
 @media (max-width: 768px) {
   .game {
-    height: 70vmin;
     width: 70vmin;
-    gap: 1vmin;
+    height: 70vmin;
   }
   .box {
-    height: 20vmin;
     width: 20vmin;
+    height: 20vmin;
     font-size: 7vmin;
   }
   #msg {
@@ -100,13 +111,12 @@ body {
 
 @media (max-width: 480px) {
   .game {
-    height: 90vw;
     width: 90vw;
-    gap: 1vmin;
+    height: 90vw;
   }
   .box {
-    height: 28vw;
     width: 28vw;
+    height: 28vw;
     font-size: 10vw;
   }
   #msg {
